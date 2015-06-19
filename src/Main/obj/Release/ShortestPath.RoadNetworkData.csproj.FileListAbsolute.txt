@@ -1,0 +1,16 @@
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\ShortestPath\RoadNetworkData\build\release\USC.GISResearchLab.ShortestPath.RoadNetworkData.dll
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\ShortestPath\RoadNetworkData\src\obj\Release\ShortestPath.RoadNetworkData.csprojResolveAssemblyReference.cache
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\ShortestPath\RoadNetworkData\src\obj\Release\USC.GISResearchLab.ShortestPath.RoadNetworkData.Properties.Resources.resources
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\ShortestPath\RoadNetworkData\src\obj\Release\ShortestPath.RoadNetworkData.csproj.GenerateResource.Cache
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\ShortestPath\RoadNetworkData\src\obj\Release\USC.GISResearchLab.ShortestPath.RoadNetworkData.dll
+C:\DevBuild\Tamu\GeoInnovation\ShortestPath\ShortestPath.RoadNetworkData\build\1.0.0\release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\obj\Release\ShortestPath.RoadNetworkData.csprojResolveAssemblyReference.cache
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.Properties.Resources.resources
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\obj\Release\ShortestPath.RoadNetworkData.csproj.GenerateResource.Cache
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\Main\obj\Release\ShortestPath.RoadNetworkData.csprojResolveAssemblyReference.cache
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\Main\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.Properties.Resources.resources
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\Main\obj\Release\ShortestPath.RoadNetworkData.csproj.GenerateResource.Cache
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\src\Main\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
+C:\DevSource\Tamu\GeoInnovation\ShortestPath\RoadNetworkData\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll

@@ -1,0 +1,1563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UserTablesSQL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WebAppSQL" xml:space="preserve">
+    <value>USE [[DBNAME]]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UsersAccountWarnings]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[UsersAccountWarnings](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[warningGuid] [varchar](255) NULL,
+	[userId] [int] NULL,
+	[added] [datetime] NULL,
+	[warning] [varchar](255) NULL,
+	[active] [bit] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_Sessions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_Sessions](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[oldSessionId] [varchar](max) NULL,
+	[sessionEnd] [datetime] NULL,
+	[sessionEndReason] [varchar](max) NULL,
+	[sessionId] [varchar](max) NULL,
+	[sessionIP] [varchar](max) NULL,
+	[sessionStart] [datetime] NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_SessionActivities]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_SessionActivities](
+	[activity] [varchar](max) NULL,
+	[activityTime] [datetime] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[requestPage] [varchar](max) NULL,
+	[sessionId] [varchar](max) NULL,
+	[sessionIP] [varchar](max) NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_Services]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_Services](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[serviceId] [int] NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_ServiceActivities]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_ServiceActivities](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[serviceId] [int] NULL,
+	[userId] [int] NULL,
+	[added] [datetime] NULL,
+	[action] [varchar](max) NULL,
+	[processGuid] [nvarchar](50) NULL,
+	[source] [varchar](255) NULL,
+	[medium] [varchar](255) NULL,
+	[transactionGuid] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users_ServiceActivities]') AND name = N'_dta_index_Users_ServiceActivities_c_7_517576882__K4D')
+CREATE CLUSTERED INDEX [_dta_index_Users_ServiceActivities_c_7_517576882__K4D] ON [dbo].[Users_ServiceActivities] 
+(
+	[added] DESC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users_ServiceActivities]') AND name = N'_dta_index_Users_ServiceActivities_11_517576882__K2')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_ServiceActivities_11_517576882__K2] ON [dbo].[Users_ServiceActivities] 
+(
+	[serviceId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users_ServiceActivities]') AND name = N'_dta_index_Users_ServiceActivities_7_517576882__K2_K3')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_ServiceActivities_7_517576882__K2_K3] ON [dbo].[Users_ServiceActivities] 
+(
+	[serviceId] ASC,
+	[userId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users_ServiceActivities]') AND name = N'_dta_index_Users_ServiceActivities_7_517576882__K3_K2')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_ServiceActivities_7_517576882__K3_K2] ON [dbo].[Users_ServiceActivities] 
+(
+	[userId] ASC,
+	[serviceId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_Roles]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_Roles](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[roleId] [int] NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_ManagerRoles]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_ManagerRoles](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[managerroleId] [int] NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users_Databases]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users_Databases](
+	[databaseId] [int] NULL,
+	[databaseRoleId] [int] NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users](
+	[added] [datetime] NULL,
+	[email] [nvarchar](255) NULL,
+	[firstName] [nvarchar](255) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[lastName] [nvarchar](255) NULL,
+	[name] [nvarchar](50) NULL,
+	[organization] [nvarchar](255) NULL,
+	[password] [nvarchar](50) NULL,
+	[phone] [nvarchar](50) NULL,
+	[secretAnswer] [nvarchar](255) NULL,
+	[secretQuestionId] [int] NULL,
+	[position] [varchar](255) NULL,
+	[notificationServiceOutages] [bit] NULL,
+	[notificationServiceUpdates] [bit] NULL,
+	[notificationNewsUpdates] [bit] NULL,
+	[apiKey] [nvarchar](255) NULL,
+	[activated] [bit] NULL,
+	[activationKey] [nchar](255) NULL,
+	[nonProfitValidated] [bit] NULL,
+	[address1] [nvarchar](255) NULL,
+	[address2] [nvarchar](255) NULL,
+	[city] [nvarchar](255) NULL,
+	[state] [nvarchar](255) NULL,
+	[zip] [nvarchar](255) NULL,
+	[country] [nvarchar](255) NULL,
+	[website] [varchar](255) NULL,
+	[department] [varchar](255) NULL,
+	[disabled] [bit] NULL,
+	[disabledReason] [varchar](255) NULL,
+	[commercialPartnerValidated] [bit] NULL,
+	[userGuid] [varchar](255) NULL,
+	[signupIPAddress] [varchar](255) NULL,
+	[lastIPAddress] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = N'_dta_index_Users_c_11_453576654__K4')
+CREATE CLUSTERED INDEX [_dta_index_Users_c_11_453576654__K4] ON [dbo].[Users] 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = N'_dta_index_Users_11_453576654__K4_6')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_11_453576654__K4_6] ON [dbo].[Users] 
+(
+	[id] ASC
+)
+INCLUDE ( [name]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = N'_dta_index_Users_11_453576654__K4D_1_2_3_5_6_7')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_11_453576654__K4D_1_2_3_5_6_7] ON [dbo].[Users] 
+(
+	[id] DESC
+)
+INCLUDE ( [added],
+[email],
+[firstName],
+[lastName],
+[name],
+[organization]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = N'_dta_index_Users_7_453576654__K6_1_2_3_4_5_7')
+CREATE NONCLUSTERED INDEX [_dta_index_Users_7_453576654__K6_1_2_3_4_5_7] ON [dbo].[Users] 
+(
+	[name] ASC
+)
+INCLUDE ( [added],
+[email],
+[firstName],
+[id],
+[lastName],
+[organization]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = N'idx_UserGuid')
+CREATE NONCLUSTERED INDEX [idx_UserGuid] ON [dbo].[Users] 
+(
+	[userGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactionsShortestPath]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ServiceTransactionsShortestPath](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[transactionGuid] [varchar](255) NULL,
+	[fromLat] [float] NULL,
+	[fromLon] [float] NULL,
+	[toLat] [float] NULL,
+	[toLon] [float] NULL,
+	[shouldDoShortestDistance] [bit] NULL,
+	[shouldDoShortestTime] [bit] NULL,
+	[statusCodeValue] [int] NULL,
+	[statusCodeName] [varchar](255) NULL,
+	[timeTaken] [float] NULL,
+	[shortestDistance] [float] NULL,
+	[shortestTime] [float] NULL,
+	[traveledTime] [float] NULL,
+	[traveledDistance] [float] NULL,
+	[kmlDistance] [varchar](max) NULL,
+	[message] [varchar](max) NULL,
+	[added] [datetime] NULL,
+	[kmlTime] [varchar](max) NULL,
+	[userId] [int] NULL,
+	[userIPAddress] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactionsShortestPath]') AND name = N'idx_Added')
+CREATE NONCLUSTERED INDEX [idx_Added] ON [dbo].[ServiceTransactionsShortestPath] 
+(
+	[added] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactionsHistorical]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ServiceTransactionsHistorical](
+	[id] [int] NOT NULL,
+	[userId] [int] NULL,
+	[serviceId] [int] NULL,
+	[processGuid] [varchar](255) NULL,
+	[source] [varchar](255) NULL,
+	[medium] [varchar](255) NULL,
+	[transactionGuid] [varchar](255) NULL,
+	[added] [datetime] NULL,
+	[userIPAddress] [varchar](255) NULL,
+	[paymentGuid] [varchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ServiceTransactions](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NULL,
+	[serviceId] [int] NULL,
+	[processGuid] [varchar](255) NULL,
+	[source] [varchar](255) NULL,
+	[medium] [varchar](255) NULL,
+	[transactionGuid] [varchar](255) NULL,
+	[added] [datetime] NULL,
+	[userIPAddress] [varchar](255) NULL,
+	[paymentGuid] [varchar](255) NULL,
+	[version] [varchar](50) NULL,
+	[notStore] [bit] NULL,
+	[userGuid] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'_dta_index_ServiceTransactions_c_7_1989582126__K10')
+CREATE CLUSTERED INDEX [_dta_index_ServiceTransactions_c_7_1989582126__K10] ON [dbo].[ServiceTransactions] 
+(
+	[paymentGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'_dta_index_ServiceTransactions_11_789577851__K1D_K10_2_3_4_5_6_7_8_9')
+CREATE NONCLUSTERED INDEX [_dta_index_ServiceTransactions_11_789577851__K1D_K10_2_3_4_5_6_7_8_9] ON [dbo].[ServiceTransactions] 
+(
+	[id] DESC,
+	[paymentGuid] ASC
+)
+INCLUDE ( [userId],
+[serviceId],
+[processGuid],
+[source],
+[medium],
+[transactionGuid],
+[added],
+[userIPAddress]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'_dta_index_ServiceTransactions_11_789577851__K2_K7_1_3_4_5_6_8_10')
+CREATE NONCLUSTERED INDEX [_dta_index_ServiceTransactions_11_789577851__K2_K7_1_3_4_5_6_8_10] ON [dbo].[ServiceTransactions] 
+(
+	[userId] ASC,
+	[transactionGuid] ASC
+)
+INCLUDE ( [id],
+[serviceId],
+[processGuid],
+[source],
+[medium],
+[added],
+[paymentGuid]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'_dta_index_ServiceTransactions_11_789577851__K7')
+CREATE NONCLUSTERED INDEX [_dta_index_ServiceTransactions_11_789577851__K7] ON [dbo].[ServiceTransactions] 
+(
+	[transactionGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'_dta_index_ServiceTransactions_11_789577851__K7_1_3_4_5_6_8_10')
+CREATE NONCLUSTERED INDEX [_dta_index_ServiceTransactions_11_789577851__K7_1_3_4_5_6_8_10] ON [dbo].[ServiceTransactions] 
+(
+	[transactionGuid] ASC
+)
+INCLUDE ( [id],
+[serviceId],
+[processGuid],
+[source],
+[medium],
+[added],
+[paymentGuid]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_Added')
+CREATE NONCLUSTERED INDEX [idx_Added] ON [dbo].[ServiceTransactions] 
+(
+	[added] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_processGuid')
+CREATE NONCLUSTERED INDEX [idx_processGuid] ON [dbo].[ServiceTransactions] 
+(
+	[processGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_ServiceId')
+CREATE NONCLUSTERED INDEX [idx_ServiceId] ON [dbo].[ServiceTransactions] 
+(
+	[serviceId] ASC
+)
+INCLUDE ( [userId]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_serviceId-processId')
+CREATE NONCLUSTERED INDEX [idx_serviceId-processId] ON [dbo].[ServiceTransactions] 
+(
+	[serviceId] ASC,
+	[processGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_ServiceTransactions_UserId')
+CREATE NONCLUSTERED INDEX [idx_ServiceTransactions_UserId] ON [dbo].[ServiceTransactions] 
+(
+	[userId] ASC
+)
+INCLUDE ( [id],
+[serviceId],
+[processGuid],
+[source],
+[medium],
+[transactionGuid],
+[added],
+[userIPAddress],
+[paymentGuid]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_userId')
+CREATE NONCLUSTERED INDEX [idx_userId] ON [dbo].[ServiceTransactions] 
+(
+	[userId] ASC
+)
+INCLUDE ( [id],
+[serviceId],
+[processGuid],
+[source],
+[medium],
+[transactionGuid],
+[added],
+[userIPAddress],
+[paymentGuid],
+[version],
+[notStore],
+[userGuid]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_userId-serviceId')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_userId-serviceId] ON [dbo].[ServiceTransactions] 
+(
+	[userId] ASC,
+	[serviceId] ASC,
+	[id] ASC,
+	[added] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]') AND name = N'idx_UsersPayments')
+CREATE NONCLUSTERED INDEX [idx_UsersPayments] ON [dbo].[ServiceTransactions] 
+(
+	[userId] ASC,
+	[paymentGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Services]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Services](
+	[Description] [nvarchar](255) NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Location] [nvarchar](255) NULL,
+	[Name] [nvarchar](255) NULL,
+	[enabled] [bit] NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Services]') AND name = N'idx_ServiceName')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_ServiceName] ON [dbo].[Services] 
+(
+	[Name] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SecretQuestions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[SecretQuestions](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[question] [nvarchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SchemaMapping]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[SchemaMapping](
+	[cids] [nvarchar](50) NULL,
+	[fieldName] [nvarchar](50) NULL,
+	[fieldType] [nvarchar](50) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Roles]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Roles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Level] [int] NULL,
+	[Name] [nvarchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ProcessStatuses]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ProcessStatuses](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[status] [nvarchar](50) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Processes](
+	[databaseId] [int] NULL,
+	[databaseName] [varchar](255) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[processGUID] [nvarchar](255) NULL,
+	[processStatusId] [int] NULL,
+	[recordsCompleted] [int] NULL,
+	[recordsTotal] [int] NULL,
+	[resultStatus] [nvarchar](max) NULL,
+	[schemaId] [int] NULL,
+	[serviceId] [int] NULL,
+	[tableId] [int] NULL,
+	[tableName] [varchar](255) NULL,
+	[timeStarted] [datetime] NULL,
+	[timeUpdated] [datetime] NULL,
+	[userId] [int] NULL,
+	[notifyUser] [bit] NOT NULL,
+	[abortOnError] [bit] NULL,
+	[args] [varbinary](max) NULL,
+	[userIPAddress] [varchar](255) NULL,
+	[shouldNotStoreTransactionDetails] [bit] NULL,
+	[isRestartable] [bit] NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'_dta_index_Processes_c_7_245575913__K15')
+CREATE CLUSTERED INDEX [_dta_index_Processes_c_7_245575913__K15] ON [dbo].[Processes] 
+(
+	[userId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'_dta_index_Processes_11_245575913__K3_K10_K5_K15_1_2_4_6_7_8_9_11_12_13_14_16_17_18_19')
+CREATE NONCLUSTERED INDEX [_dta_index_Processes_11_245575913__K3_K10_K5_K15_1_2_4_6_7_8_9_11_12_13_14_16_17_18_19] ON [dbo].[Processes] 
+(
+	[id] ASC,
+	[serviceId] ASC,
+	[processStatusId] ASC,
+	[userId] ASC
+)
+INCLUDE ( [databaseId],
+[databaseName],
+[processGUID],
+[recordsCompleted],
+[recordsTotal],
+[resultStatus],
+[schemaId],
+[tableId],
+[tableName],
+[timeStarted],
+[timeUpdated],
+[notifyUser],
+[abortOnError],
+[args],
+[userIPAddress]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'_dta_index_Processes_11_245575913__K3D_1_2_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19')
+CREATE NONCLUSTERED INDEX [_dta_index_Processes_11_245575913__K3D_1_2_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19] ON [dbo].[Processes] 
+(
+	[id] DESC
+)
+INCLUDE ( [databaseId],
+[databaseName],
+[processGUID],
+[processStatusId],
+[recordsCompleted],
+[recordsTotal],
+[resultStatus],
+[schemaId],
+[serviceId],
+[tableId],
+[tableName],
+[timeStarted],
+[timeUpdated],
+[userId],
+[notifyUser],
+[abortOnError],
+[args],
+[userIPAddress]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'_dta_index_Processes_7_245575913__K10_K15_6')
+CREATE NONCLUSTERED INDEX [_dta_index_Processes_7_245575913__K10_K15_6] ON [dbo].[Processes] 
+(
+	[serviceId] ASC,
+	[userId] ASC
+)
+INCLUDE ( [recordsCompleted]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'idx_Id')
+CREATE NONCLUSTERED INDEX [idx_Id] ON [dbo].[Processes] 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Processes]') AND name = N'idx_ProcessGuid')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_ProcessGuid] ON [dbo].[Processes] 
+(
+	[processGUID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Payments](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[paymentGuid] [varchar](255) NULL,
+	[UserId] [int] NULL,
+	[added] [datetime] NULL,
+	[updated] [datetime] NULL,
+	[success] [bit] NULL,
+	[numberOfRecords] [int] NULL,
+	[paymentAmount] [float] NULL,
+	[paymentRateGuid] [varchar](255) NULL,
+	[fromCount] [int] NULL,
+	[toCount] [int] NULL,
+	[transactionsPerCent] [float] NULL,
+	[active] [bit] NULL,
+	[comment] [varchar](max) NULL,
+	[ctsTrans] [varchar](255) NULL,
+	[firstName] [varchar](255) NULL,
+	[lastName] [varchar](255) NULL,
+	[email] [varchar](255) NULL,
+	[numberRemaining] [int] NULL,
+	[note] [varchar](max) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'_dta_index_Payments_c_11_981578535__K3')
+CREATE CLUSTERED INDEX [_dta_index_Payments_c_11_981578535__K3] ON [dbo].[Payments] 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'_dta_index_Payments_11_981578535__K2_7_27')
+CREATE NONCLUSTERED INDEX [_dta_index_Payments_11_981578535__K2_7_27] ON [dbo].[Payments] 
+(
+	[paymentGuid] ASC
+)
+INCLUDE ( [numberOfRecords],
+[numberRemaining]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'_dta_index_Payments_11_981578535__K3_K21_K1_2')
+CREATE NONCLUSTERED INDEX [_dta_index_Payments_11_981578535__K3_K21_K1_2] ON [dbo].[Payments] 
+(
+	[UserId] ASC,
+	[active] ASC,
+	[id] ASC
+)
+INCLUDE ( [paymentGuid]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'idx_PaymentGuid')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_PaymentGuid] ON [dbo].[Payments] 
+(
+	[paymentGuid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'idx_User_Active')
+CREATE NONCLUSTERED INDEX [idx_User_Active] ON [dbo].[Payments] 
+(
+	[UserId] ASC,
+	[active] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Payments]') AND name = N'idx_UserId')
+CREATE NONCLUSTERED INDEX [idx_UserId] ON [dbo].[Payments] 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PaymentRates]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[PaymentRates](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[paymentRateGuid] [varchar](255) NULL,
+	[fromCount] [int] NULL,
+	[toCount] [int] NULL,
+	[transactionsPerCent] [float] NULL,
+	[addedUserId] [int] NULL,
+	[addedDate] [datetime] NULL,
+	[updatedUserId] [int] NULL,
+	[updatedDate] [datetime] NULL,
+	[active] [bit] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PageErrors]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[PageErrors](
+	[cookies] [varchar](max) NULL,
+	[errorDateTime] [datetime] NULL,
+	[errorMessage] [varchar](max) NULL,
+	[errorType] [varchar](255) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[method] [varchar](50) NULL,
+	[page] [varchar](max) NULL,
+	[queryString] [varchar](max) NULL,
+	[request] [varchar](max) NULL,
+	[requestParams] [varchar](max) NULL,
+	[service] [varchar](255) NULL,
+	[stackTrace] [varchar](max) NULL,
+	[url] [varchar](max) NULL,
+	[userId] [int] NULL,
+	[userName] [varchar](255) NULL,
+	[userIPAddress] [varchar](255) NULL,
+ CONSTRAINT [PK_PageErrors] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[PageErrors]') AND name = N'idx_errorDateTime')
+CREATE NONCLUSTERED INDEX [idx_errorDateTime] ON [dbo].[PageErrors] 
+(
+	[errorDateTime] ASC
+)
+INCLUDE ( [id]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ManagerRoles]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ManagerRoles](
+	[description] [nvarchar](255) NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HistoricalTransactionMigrations]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[HistoricalTransactionMigrations](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[added] [datetime] NULL,
+	[userId] [int] NULL,
+	[userIPAddress] [varchar](255) NULL,
+	[migrationGuid] [varchar](255) NULL,
+	[migrationMinimumDate] [datetime] NULL,
+	[tableName] [varchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[FAQPosts_Catgories]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[FAQPosts_Catgories](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[categoryId] [int] NULL,
+	[postId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[FAQPosts]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[FAQPosts](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[post] [nvarchar](max) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[FAQCategories]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[FAQCategories](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[category] [varchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmailMessages]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[EmailMessages](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[guid] [varchar](255) NULL,
+	[fromEmail] [varchar](255) NULL,
+	[toEmail] [varchar](255) NULL,
+	[ccList] [varchar](255) NULL,
+	[subject] [varchar](255) NULL,
+	[body] [varchar](max) NULL,
+	[success] [bit] NULL,
+	[errorMessage] [varchar](max) NULL,
+	[bccList] [varchar](255) NULL,
+	[sentDateTime] [datetime] NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[EmailMessages]') AND name = N'idx_Guid')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_Guid] ON [dbo].[EmailMessages] 
+(
+	[guid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DefinedSchemas_Fields_Groups]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DefinedSchemas_Fields_Groups](
+	[fieldid] [int] NULL,
+	[groupid] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[schemaid] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DefinedSchemas]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DefinedSchemas](
+	[createddate] [datetime] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](50) NULL,
+	[sharedLevel] [nvarchar](50) NULL,
+	[userId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DefinedSchemaGroups]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DefinedSchemaGroups](
+	[direction] [int] NULL,
+	[groupName] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[schemaId] [int] NULL,
+	[required] [bit] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DefinedSchemaFields]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DefinedSchemaFields](
+	[direction] [int] NULL,
+	[fieldName] [nvarchar](50) NULL,
+	[fieldType] [nvarchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[required] [int] NULL,
+	[schemaId] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DatabaseTables_DefinedSchemas]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DatabaseTables_DefinedSchemas](
+	[databaseId] [int] NULL,
+	[definedschemaid] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tableid] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DatabaseTables]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DatabaseTables](
+	[databaseId] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](255) NULL,
+	[tableSchema] [nvarchar](max) NULL,
+	[numberOfRows] [int] NULL,
+	[tableGuid] [varchar](255) NULL,
+	[databaseGuid] [varchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DatabaseTableColumns_DefinedSchemaFields]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DatabaseTableColumns_DefinedSchemaFields](
+	[databaseId] [int] NULL,
+	[databasetablecolumnids] [nvarchar](50) NULL,
+	[definedschemafieldid] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[schemaid] [int] NULL,
+	[tableid] [int] NULL,
+	[definedschemagroupid] [int] NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DatabaseTableColumns]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DatabaseTableColumns](
+	[columnname] [nvarchar](50) NULL,
+	[columntype] [nvarchar](50) NULL,
+	[databaseId] [int] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tableId] [int] NULL,
+	[columnGuid] [varchar](255) NULL,
+	[tableGuid] [varchar](255) NULL,
+	[databaseGuid] [varchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Databases]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Databases](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](255) NULL,
+	[path] [nvarchar](255) NULL,
+	[uploadedDate] [datetime] NULL,
+	[userId] [int] NULL,
+	[shared] [bit] NOT NULL,
+	[enabled] [bit] NOT NULL,
+	[size] [varchar](50) NULL,
+	[datasourceType] [varchar](50) NULL,
+	[firstRowHeader] [bit] NULL,
+	[textQualifier] [varchar](50) NULL,
+	[textSeperator] [varchar](50) NULL,
+	[validated] [bit] NULL,
+	[notRemoved] [bit] NULL,
+	[databaseGuid] [varchar](255) NULL,
+	[recordCount] [int] NULL,
+	[sizeInBytes] [decimal](32, 18) NULL,
+	[autoDeleteNotified] [bit] NULL,
+	[autoDeleteNotifiedDate] [datetime] NULL,
+	[skipAutoDelete] [bit] NULL,
+	[autoDeleted] [bit] NULL,
+	[autoDeletedDate] [datetime] NULL,
+	[tempTableName] [varchar](255) NULL,
+	[autoDeleteNotifiedHoursRemaining] [int] NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Databases]') AND name = N'idx_Id')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_Id] ON [dbo].[Databases] 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Databases]') AND name = N'idx_Id_NotRemoved')
+CREATE NONCLUSTERED INDEX [idx_Id_NotRemoved] ON [dbo].[Databases] 
+(
+	[id] ASC,
+	[notRemoved] ASC
+)
+INCLUDE ( [name],
+[path],
+[uploadedDate],
+[userId],
+[shared],
+[enabled],
+[size],
+[datasourceType],
+[firstRowHeader],
+[textQualifier],
+[textSeperator],
+[validated],
+[databaseGuid],
+[recordCount]) WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DatabaseRoles]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DatabaseRoles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](255) NULL
+) ON [PRIMARY]
+END
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BannedIPAddresses]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[BannedIPAddresses](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NULL,
+	[ipAddress] [varchar](50) NULL,
+	[added] [datetime] NULL,
+	[reason] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[BannedIPAddresses]') AND name = N'idx_IPAddress')
+CREATE UNIQUE NONCLUSTERED INDEX [idx_IPAddress] ON [dbo].[BannedIPAddresses] 
+(
+	[ipAddress] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AllowedMultiUserIPAddresses]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[AllowedMultiUserIPAddresses](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NULL,
+	[ipAddress] [varchar](50) NULL,
+	[added] [datetime] NULL,
+	[reason] [varchar](255) NULL
+) ON [PRIMARY]
+END
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Databases_recordCount]') AND parent_object_id = OBJECT_ID(N'[dbo].[Databases]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Databases_recordCount]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Databases] ADD  CONSTRAINT [DF_Databases_recordCount]  DEFAULT ((-1)) FOR [recordCount]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Databases_deleteNotified]') AND parent_object_id = OBJECT_ID(N'[dbo].[Databases]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Databases_deleteNotified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Databases] ADD  CONSTRAINT [DF_Databases_deleteNotified]  DEFAULT ((0)) FOR [autoDeleteNotified]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Databases_skipAutoDelete]') AND parent_object_id = OBJECT_ID(N'[dbo].[Databases]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Databases_skipAutoDelete]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Databases] ADD  CONSTRAINT [DF_Databases_skipAutoDelete]  DEFAULT ((0)) FOR [skipAutoDelete]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Databases_autoDeleted]') AND parent_object_id = OBJECT_ID(N'[dbo].[Databases]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Databases_autoDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Databases] ADD  CONSTRAINT [DF_Databases_autoDeleted]  DEFAULT ((0)) FOR [autoDeleted]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_DatabaseTables_numberOfRows]') AND parent_object_id = OBJECT_ID(N'[dbo].[DatabaseTables]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_DatabaseTables_numberOfRows]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[DatabaseTables] ADD  CONSTRAINT [DF_DatabaseTables_numberOfRows]  DEFAULT ((-1)) FOR [numberOfRows]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_DefinedSchemaGroups_required]') AND parent_object_id = OBJECT_ID(N'[dbo].[DefinedSchemaGroups]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_DefinedSchemaGroups_required]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[DefinedSchemaGroups] ADD  CONSTRAINT [DF_DefinedSchemaGroups_required]  DEFAULT ((0)) FOR [required]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_EmailMessages_success]') AND parent_object_id = OBJECT_ID(N'[dbo].[EmailMessages]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_EmailMessages_success]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[EmailMessages] ADD  CONSTRAINT [DF_EmailMessages_success]  DEFAULT ((0)) FOR [success]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_PaymentRates_active]') AND parent_object_id = OBJECT_ID(N'[dbo].[PaymentRates]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_PaymentRates_active]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[PaymentRates] ADD  CONSTRAINT [DF_PaymentRates_active]  DEFAULT ((0)) FOR [active]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Payments_success]') AND parent_object_id = OBJECT_ID(N'[dbo].[Payments]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Payments_success]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Payments] ADD  CONSTRAINT [DF_Payments_success]  DEFAULT ((0)) FOR [success]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Payments_active]') AND parent_object_id = OBJECT_ID(N'[dbo].[Payments]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Payments_active]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Payments] ADD  CONSTRAINT [DF_Payments_active]  DEFAULT ((0)) FOR [active]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Processes_recordsCompleted]') AND parent_object_id = OBJECT_ID(N'[dbo].[Processes]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Processes_recordsCompleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Processes] ADD  CONSTRAINT [DF_Processes_recordsCompleted]  DEFAULT ((0)) FOR [recordsCompleted]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Processes_recordsTotal]') AND parent_object_id = OBJECT_ID(N'[dbo].[Processes]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Processes_recordsTotal]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Processes] ADD  CONSTRAINT [DF_Processes_recordsTotal]  DEFAULT ((0)) FOR [recordsTotal]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Processes_shouldNotStoreTranscationDetails]') AND parent_object_id = OBJECT_ID(N'[dbo].[Processes]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Processes_shouldNotStoreTranscationDetails]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Processes] ADD  CONSTRAINT [DF_Processes_shouldNotStoreTranscationDetails]  DEFAULT ((0)) FOR [shouldNotStoreTransactionDetails]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Processes_isRestartable]') AND parent_object_id = OBJECT_ID(N'[dbo].[Processes]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Processes_isRestartable]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Processes] ADD  CONSTRAINT [DF_Processes_isRestartable]  DEFAULT ((0)) FOR [isRestartable]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Services_enabled]') AND parent_object_id = OBJECT_ID(N'[dbo].[Services]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Services_enabled]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Services] ADD  CONSTRAINT [DF_Services_enabled]  DEFAULT ((0)) FOR [enabled]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_ServiceTransactions_version]') AND parent_object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_ServiceTransactions_version]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[ServiceTransactions] ADD  CONSTRAINT [DF_ServiceTransactions_version]  DEFAULT ((0)) FOR [version]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_ServiceTransactions_notStore]') AND parent_object_id = OBJECT_ID(N'[dbo].[ServiceTransactions]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_ServiceTransactions_notStore]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[ServiceTransactions] ADD  CONSTRAINT [DF_ServiceTransactions_notStore]  DEFAULT ((0)) FOR [notStore]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_ServiceTransactionsShortestPath_shouldDoShortesDistance]') AND parent_object_id = OBJECT_ID(N'[dbo].[ServiceTransactionsShortestPath]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_ServiceTransactionsShortestPath_shouldDoShortesDistance]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[ServiceTransactionsShortestPath] ADD  CONSTRAINT [DF_ServiceTransactionsShortestPath_shouldDoShortesDistance]  DEFAULT ((0)) FOR [shouldDoShortestDistance]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_ServiceTransactionsShortestPath_shouldDoShortesTime]') AND parent_object_id = OBJECT_ID(N'[dbo].[ServiceTransactionsShortestPath]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_ServiceTransactionsShortestPath_shouldDoShortesTime]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[ServiceTransactionsShortestPath] ADD  CONSTRAINT [DF_ServiceTransactionsShortestPath_shouldDoShortesTime]  DEFAULT ((0)) FOR [shouldDoShortestTime]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Users_activated]') AND parent_object_id = OBJECT_ID(N'[dbo].[Users]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Users_activated]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_activated]  DEFAULT ((0)) FOR [activated]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Users_nonProfitValidated]') AND parent_object_id = OBJECT_ID(N'[dbo].[Users]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Users_nonProfitValidated]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_nonProfitValidated]  DEFAULT ((0)) FOR [nonProfitValidated]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Users_disabled]') AND parent_object_id = OBJECT_ID(N'[dbo].[Users]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Users_disabled]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_disabled]  DEFAULT ((0)) FOR [disabled]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_Users_commercialPartnerValidated]') AND parent_object_id = OBJECT_ID(N'[dbo].[Users]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Users_commercialPartnerValidated]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_commercialPartnerValidated]  DEFAULT ((0)) FOR [commercialPartnerValidated]
+END
+End
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF_UsersAccountWarnings_warning]') AND parent_object_id = OBJECT_ID(N'[dbo].[UsersAccountWarnings]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_UsersAccountWarnings_warning]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[UsersAccountWarnings] ADD  CONSTRAINT [DF_UsersAccountWarnings_warning]  DEFAULT ((0)) FOR [active]
+END
+End
+
+--Declarations
+DECLARE @adminid INT
+DECLARE @spschemaId INT
+DECLARE @adminroleId INT
+DECLARE @spserviceId INT
+
+--SchemaGroups
+DECLARE @optionaloutputId INT
+DECLARE @pointsId INT
+DECLARE @outputId INT
+
+--fields
+DECLARE @kmldId INT
+DECLARE @ttId INT
+DECLARE @tdId INT
+DECLARE @timeId INT
+DECLARE @kmltId INT
+DECLARE @nearId INT
+DECLARE @IDId INT
+DECLARE @flatId INT
+DECLARE @flongId INT
+DECLARE @tlatId INT
+DECLARE @tlongId INT
+DECLARE @stId INT
+DECLARE @sdId INT
+
+--managerRoles
+DECLARE @digId INT
+DECLARE @emailId INT
+DECLARE @payId INT
+DECLARE @secId INT
+DECLARE @transId INT
+DECLARE @userId INT
+DECLARE @dbId INT
+DECLARE @schemaId INT
+DECLARE @serviceId INT
+DECLARE @roleId INT
+DECLARE @procId INT
+
+IF Not EXISTS (SELECT * FROM [Users] WHERE [name] = 'admin')
+BEGIN
+INSERT INTO [dbo].[Users]
+	VALUES('2010-4-30 00:00:00.000', 'spadmin@naaccr.org', 'Admin', '', 'admin', 'NAACCR', 'C7E10C30139D0FB832F12F3F0B23D935928EC223J5XJ/F4=',
+	 '', '', 0, 'Administrator', 0, 0, 0, null, 1, null, 0, null, null, null, null, null, null, null, null, null, null, 0, '15437a47-1e55-4dfa-9d8e-337dea3e6fee', null, null)
+END
+SELECT @adminid=id FROM [Users] WHERE [name] = 'admin'
+
+IF Not EXISTS (SELECT * FROM [Services] WHERE [name] = 'ShortestPath')
+BEGIN
+INSERT INTO [Services] VALUES ('Calculates the shortest path between two points', '/Services/ShortestPath/default.aspx', 'ShortestPath', 1)
+END
+SELECT @spserviceId=id FROM [Services] WHERE [name] = 'ShortestPath'
+
+IF Not EXISTS (SELECT * FROM [Users_Services] WHERE ([serviceId] = @spserviceId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_Services] VALUES (@spserviceId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [DefinedSchemas] WHERE [name] = 'ShortestPath')
+BEGIN
+INSERT INTO [DefinedSchemas]
+     VALUES ('2010-4-30 00:00:00.000','ShortestPath', 'Shared', @adminid)
+END
+SELECT @spschemaId=id FROM [DefinedSchemas] WHERE [name] = 'ShortestPath'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaGroups] WHERE [groupName] = 'OptionalOutput')
+BEGIN
+INSERT INTO [DefinedSchemaGroups] VALUES(1, 'OptionalOutput', @spschemaId, 0)
+END
+SELECT @optionaloutputId=id FROM [DefinedSchemaGroups] WHERE [groupName] = 'OptionalOutput'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaGroups] WHERE [groupName] = 'Points')
+BEGIN
+INSERT INTO [DefinedSchemaGroups] VALUES(0, 'Points', @spschemaId, 1)
+END
+SELECT @pointsId=id FROM [DefinedSchemaGroups] WHERE [groupName] = 'Points'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaGroups] WHERE [groupName] = 'Output')
+BEGIN
+INSERT INTO [DefinedSchemaGroups] VALUES(1, 'Output', @spschemaId, 1)
+END
+SELECT @outputId=id FROM [DefinedSchemaGroups] WHERE [groupName] = 'Output'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'KMLDistance')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'KMLDistance' ,'LongText' ,0 ,@spschemaId)
+END
+SELECT @kmldId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'KMLDistance'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'TravelTime')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'TravelTime' ,'Double' ,1 ,@spschemaId)
+END
+SELECT @ttId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'TravelTime'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'TravelDistance')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'TravelDistance' ,'Double' ,1 ,@spschemaId)
+END
+SELECT @tdId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'TravelDistance'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'TimeTaken')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'TimeTaken' ,'Double' ,0 ,@spschemaId)
+END
+SELECT @timeId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'TimeTaken'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'KMLTime')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'KMLTime' ,'LongText' ,0 ,@spschemaId)
+END
+SELECT @kmltId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'KMLTime'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'NearestNodeDistance')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'NearestNodeDistance' ,'Double' ,1 , @spschemaId)
+END
+SELECT @nearId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'NearestNodeDistance'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'ID')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (0 ,'ID' ,'Integer' ,1 , @spschemaId)
+END
+SELECT @IDId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'ID'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'FromLat')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (0 ,'FromLat' ,'Double' ,1 , @spschemaId)
+END
+SELECT @flatId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'FromLat'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'FromLon')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (0 ,'FromLon' ,'Double' ,1 , @spschemaId)
+END
+SELECT @flongId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'FromLon'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'ToLat')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (0 ,'ToLat' ,'Double' ,1 , @spschemaId)
+END
+SELECT @tlatId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'ToLat'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'ToLon')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (0 ,'ToLon' ,'Double' ,1 , @spschemaId)
+END
+SELECT @tlongId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'ToLon'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'ShortestTime')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'ShortestTime' ,'Double' ,1 , @spschemaId)
+END
+SELECT @stId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'ShortestTime'
+IF Not EXISTS (SELECT * FROM [DefinedSchemaFields] WHERE [fieldName] = 'ShortestDistance')
+BEGIN
+INSERT INTO [DefinedSchemaFields] VALUES (1 ,'ShortestDistance' ,'Double' ,1 , @spschemaId)
+END
+SELECT @sdId=id FROM [DefinedSchemaFields] WHERE [fieldName] = 'ShortestDistance'
+
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @kmldId) and (groupid = @optionaloutputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@kmldId, @optionaloutputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @timeId) and (groupid = @optionaloutputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@timeId, @optionaloutputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @kmltId) and (groupid = @optionaloutputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@kmltId, @optionaloutputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @ttId) and (groupid = @outputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@ttId, @outputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @tdId) and (groupid = @outputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@tdId, @outputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @sdId) and (groupid = @outputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@sdId, @outputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @stId) and (groupid = @outputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@stId, @outputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @nearId) and (groupid = @outputId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@nearId, @outputId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @IDId) and (groupid = @pointsId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@IDId, @pointsId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @flatId) and (groupid = @pointsId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@flatId, @pointsId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @flongId) and (groupid = @pointsId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@flongId, @pointsId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @tlatId) and (groupid = @pointsId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@tlatId, @pointsId, @spschemaId)
+END
+IF Not EXISTS (SELECT * FROM [DefinedSchemas_Fields_Groups] WHERE ([fieldid] = @tlongId) and (groupid = @pointsId))
+BEGIN
+INSERT INTO [DefinedSchemas_Fields_Groups] VALUES (@tlongId, @pointsId, @spschemaId)
+END
+
+IF Not EXISTS (SELECT * FROM [Roles] WHERE [level] = 9)
+BEGIN
+INSERT INTO [Roles] VALUES (9 ,'Administrator')
+END
+SELECT @adminroleId=Id FROM [Roles] WHERE [level] = 9
+IF Not EXISTS (SELECT * FROM [Roles] WHERE [level] = 8)
+BEGIN
+INSERT INTO [Roles] VALUES (8 ,'Manager')
+END
+IF Not EXISTS (SELECT * FROM [Roles] WHERE [level] = 7)
+BEGIN
+INSERT INTO [Roles] VALUES (7 ,'User')
+END
+IF Not EXISTS (SELECT * FROM [Roles] WHERE [level] = 1)
+BEGIN
+INSERT INTO [Roles] VALUES (1 ,'Guest')
+END
+
+IF Not EXISTS (SELECT * FROM [Users_Roles] WHERE ([roleId] = @adminroleId) and (userId = @adminId))
+BEGIN
+INSERT INTO [Users_Roles] VALUES (@adminroleId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [DatabaseRoles] WHERE [Name] = 'Owner')
+BEGIN
+INSERT INTO [DatabaseRoles] VALUES ('Owner')
+END
+IF Not EXISTS (SELECT * FROM [DatabaseRoles] WHERE [Name] = 'SharedAccess')
+BEGIN
+INSERT INTO [DatabaseRoles] VALUES ('SharedAccess')
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Diagnostic')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of handling errors' ,'Diagnostic')
+END
+SELECT @digId=Id FROM [ManagerRoles] WHERE [Name] = 'Diagnostic'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @digId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@digId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Process')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of administering processes' ,'Process')
+END
+SELECT @procId=Id FROM [ManagerRoles] WHERE [Name] = 'Process'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @procId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@procId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Email')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of handling emails' ,'Email')
+END
+SELECT @emailId=Id FROM [ManagerRoles] WHERE [Name] = 'Email'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @emailId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@emailId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Payment')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of handling payments' ,'Payment')
+END
+SELECT @payId=Id FROM [ManagerRoles] WHERE [Name] = 'Payment'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @payId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@payId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Security')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of handling security' ,'Security')
+END
+SELECT @secId=Id FROM [ManagerRoles] WHERE [Name] = 'Security'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @secId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@secId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Transaction')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of handling transactions' ,'Transaction')
+END
+SELECT @transId=Id FROM [ManagerRoles] WHERE [Name] = 'Transaction'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @transId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@transId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'User')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of user accounts:   - Sets user account levels' ,'User')
+END
+SELECT @userId=Id FROM [ManagerRoles] WHERE [Name] = 'User'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @userId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@userId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Database')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of assigning database privileges:   - Sets visible databases' ,'Database')
+END
+SELECT @dbId=Id FROM [ManagerRoles] WHERE [Name] = 'Database'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @dbId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@dbId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Schema')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of assigning schema privileges:   - Sets visible schemas' ,'Schema')
+END
+SELECT @schemaId=Id FROM [ManagerRoles] WHERE [Name] = 'Schema'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @schemaId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@schemaId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Service')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of assigning service privileges:   - Sets visible services   - Adds/Removes services' ,'Service')
+END
+SELECT @serviceId=Id FROM [ManagerRoles] WHERE [Name] = 'Service'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @serviceId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@serviceId, @adminId)
+END
+
+IF Not EXISTS (SELECT * FROM [ManagerRoles] WHERE [Name] = 'Role')
+BEGIN
+INSERT INTO [ManagerRoles] VALUES ('Manager role in charge of creating and assigning roles' ,'Role')
+END
+SELECT @roleId=Id FROM [ManagerRoles] WHERE [Name] = 'Role'
+IF Not EXISTS (SELECT * FROM [Users_ManagerRoles] WHERE ([managerroleId] = @roleId) and ([userId] = @adminId))
+BEGIN
+INSERT INTO [Users_ManagerRoles] VALUES (@roleId, @adminId)
+END
+
+INSERT INTO [SecretQuestions] VALUES
+('In what city where you born?'),('What was the name of your elemetary school?'), ('What is you father''s name?'),
+('What was your first pet''s name?'), ('What is your favorite color?'), ('How many siblings do you have?')
+
+INSERT INTO [ProcessStatuses] ([status]) VALUES
+('Starting'),('Started'),('Running'),('Completing'),('Completed'),
+('Cancelling'),('Cancelled'),('Pausing'),('Paused'),('Resuming'),
+('Resumed'),('ExceptionAborting'),('ExceptionAborted'),('ThreadAborting'),('ThreadAborted')</value>
+  </data>
+</root>
