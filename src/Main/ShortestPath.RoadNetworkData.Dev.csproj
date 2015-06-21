@@ -81,26 +81,6 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Configurations">
-      <HintPath>..\..\..\Common.Core.Configurations\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.Common.Core.Configurations.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Logging.TraceEvents">
-      <HintPath>..\..\..\Common.Core.Logging.TraceEvents\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.Common.Core.Logging.TraceEvents.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Data.Databases">
-      <HintPath>..\..\..\Common.Data.Databases\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.Common.Data.Databases.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper">
-      <HintPath>..\..\..\ShapefileReaders.Remiers.Shp2KmlWrapper\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="TAMU.GeoInnovation.ShortestPath.GraphStructure">
-      <HintPath>..\..\..\ShortestPath.GraphStructure\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShortestPath.GraphStructure.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GraphUtils.cs" />
@@ -146,6 +126,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common.Core.Configurations\Src\Main\Common.Core.Configurations.Dev.csproj">
+      <Project>{CA57DD09-BCF7-439A-A6FB-6FCBE125FB71}</Project>
+      <Name>Common.Core.Configurations.Dev</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Logging.TraceEvents\Src\Main\Common.Core.Logging.TraceEvents.Dev.csproj">
+      <Project>{9F19062E-A949-4FF8-8DC1-7239F06348DF}</Project>
+      <Name>Common.Core.Logging.TraceEvents.Dev</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Data.Databases\Src\Main\Common.Data.Databases.Dev.csproj">
+      <Project>{A7DF15F2-1210-4431-B223-A3A2810DC14A}</Project>
+      <Name>Common.Data.Databases.Dev</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ShapefileReaders.Reimers.Shp2KmlWrapper\src\Main\ShapefileReaders.Reimers.Shp2KmlWrapper.Dev.csproj">
+      <Project>{4601E149-77F9-49D9-9DBA-8A90F2D3CC47}</Project>
+      <Name>ShapefileReaders.Reimers.Shp2KmlWrapper.Dev</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ShortestPath.GraphStructure\src\Main\ShortestPath.GraphStructure.Dev.csproj">
+      <Project>{F9BB59CB-961E-4002-9267-93E3806E93C4}</Project>
+      <Name>ShortestPath.GraphStructure.Dev</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
