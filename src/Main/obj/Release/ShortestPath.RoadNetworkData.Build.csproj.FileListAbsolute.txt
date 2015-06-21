@@ -1,4 +1,0 @@
-C:\DevSource\Tamu\GeoInnovation\ShortestPath.RoadNetworkData\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
-C:\DevSource\Tamu\GeoInnovation\ShortestPath.RoadNetworkData\src\Main\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.Properties.Resources.resources
-C:\DevSource\Tamu\GeoInnovation\ShortestPath.RoadNetworkData\src\Main\obj\Release\ShortestPath.RoadNetworkData.Build.csproj.GenerateResource.Cache
-C:\DevSource\Tamu\GeoInnovation\ShortestPath.RoadNetworkData\src\Main\obj\Release\Tamu.GeoInnovation.ShortestPath.RoadNetworkData.dll
