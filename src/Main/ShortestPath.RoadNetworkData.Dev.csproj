@@ -78,6 +78,9 @@
       <HintPath>..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Reimers.Map">
+      <HintPath>..\..\libs\Reimers.Map.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -166,9 +169,8 @@
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\ShapefileReaders.Reimers.Shp2KmlWrapper\src\Main\ShapefileReaders.Reimers.Shp2KmlWrapper.Dev.csproj">
-      <Project>{4601E149-77F9-49D9-9DBA-8A90F2D3CC47}</Project>
+      <Project>{4601e149-77f9-49d9-9dba-8a90f2d3cc47}</Project>
       <Name>ShapefileReaders.Reimers.Shp2KmlWrapper.Dev</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\ShortestPath.GraphStructure\src\Main\ShortestPath.GraphStructure.Dev.csproj">
       <Project>{F9BB59CB-961E-4002-9267-93E3806E93C4}</Project>
