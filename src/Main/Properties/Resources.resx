@@ -1552,7 +1552,7 @@ INSERT INTO [Users_ManagerRoles] VALUES (@roleId, @adminId)
 END
 
 INSERT INTO [SecretQuestions] VALUES
-('In what city where you born?'),('What was the name of your elemetary school?'), ('What is you father''s name?'),
+('In what city where you born?'),('What was the name of your elementary school?'), ('What is your father''s name?'),
 ('What was your first pet''s name?'), ('What is your favorite color?'), ('How many siblings do you have?')
 
 INSERT INTO [ProcessStatuses] ([status]) VALUES
