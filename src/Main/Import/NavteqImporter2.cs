@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Types;
+using Reimers.Esri;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
-using Microsoft.SqlServer.Types;
-using Reimers.Esri;
 using USC.GISResearchLab.Common.Databases.Odbc;
 using USC.GISResearchLab.Common.Databases.TypeConverters;
 using USC.GISResearchLab.Common.Diagnostics.TraceEvents;
